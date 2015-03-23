@@ -1,0 +1,48 @@
+This page describes how to use the [Denon AVP/AVR Control](http://code.google.com/p/denonavpcontrol/) plugin for the [Logitech Media Server](http://www.mysqueezebox.com/download).  Optionally the plugin provides a very rich user experience when combined with the native iTouch application, [iPeng](http://penguinlovesmusic.de/).
+# Using the Plugin #
+First you must install the plugin as described in the [installation](http://code.google.com/p/denonavpcontrol/wiki/InstallationInstructions) wiki page.  Secondly if using the [iPeng](http://penguinlovesmusic.de/) application you must install that application on your iTouch device too.
+
+Once the plugin (and [iPeng](http://penguinlovesmusic.de/)) is installed, it is fairly straight forward to use, and in many cases there is nothing that you need to be aware of during use. The application is completely transparent with the exception of the optional audio settings adjustments during playback.
+## Normal Operation ##
+Once the plugin has been installed and configured it is very simple and transparent to use.  Make sure your DENON AVP/AVR is in Standby mode and connected to the network (wired or wirelessly).
+### Turning On the Systems ###
+To turn on the AVP/AVR you simply turn on your Squeezebox either by using the remote or the web GUI.  You may also optionally press the play button if there is currently a track in your playlist.  This will cause the Squeezebox to turn on and play the track.  This in turn will turn on the DENON AVP/AVR.  If you have set up one of the Quick Select options (highly recommended) the plugin will set your DENON AVP/AVR to the correct input and to all your desired audio settings.
+### Playing a Track ###
+To play a track simply use your Squeezebox remote or the [Logitech Media Server](http://www.mysqueezebox.com/download) Web GUI as you would normally.  There is no change to this process while using the plugin.  Pausing a track will not affect your DENON AVP/AVR and it will remain connected and on.
+### Changing the Volume ###
+If you change the volume using the Squeezebox remote or the Squeezebox Server Web GUI the plugin will capture your changes and automatically send these to the DENON AVP/AVR.  There is about a half second delay between the Squeezebox and the DENON AVP/AVR built into the plugin to keep the Squeezebox from making unessessary adjustments to the DENON.
+
+Optionally if you have selected the ability for the DENON AVP/AVR to send new volume changes the user might have made directly to the AVP/AVR, this will occur at every track change.
+### Turing Off the Systems ###
+When you are done with the Squeezebox and the DENON AVP/AVR simply use your Squeezebox remote or the Squeezebox Server Web GUI and turn off the player. The DENON AVP/AVR will automatically go into Standby mode.
+# Operation With the Native iPeng Application and an iTouch Device #
+For an advanced user experience with the Squeezebox I highly recommend the native [iPeng](http://penguinlovesmusic.de/) application and an iTouch device.  This section will describe how to use the [Denon AVP/AVR Control](http://code.google.com/p/denonavpcontrol/) plugin with the [iPeng](http://penguinlovesmusic.de/) application.
+### Turning On and Off the Systems ###
+There is no change in how you would use the [Denon AVP/AVR Control](http://code.google.com/p/denonavpcontrol/) plugin with [iPeng](http://penguinlovesmusic.de/) than you would with the Squeezebox natively.  Simply select the player that the plugin is configured for and press the Squeezebox player icon at the bottom of the Now Playing screen.  When turned on the player icon will be highlighted.
+
+Note that if your player is off and you press the Play (>) icon, the pluging will automatically turn on the DENON AVP/AVR.  Because of the delay in turning the unit on, the early part of the track will not be heard.
+
+To turn the sytem off just select the player icon. It will become unhighlighted and the Denon AVP/AVR will automatically go into Standby mode.
+
+![http://denonavpcontrol.googlecode.com/files/DenonAvpControlPlayers.jpg](http://denonavpcontrol.googlecode.com/files/DenonAvpControlPlayers.jpg)  ![http://denonavpcontrol.googlecode.com/files/DenonAvpControlNowPlaying.jpg](http://denonavpcontrol.googlecode.com/files/DenonAvpControlNowPlaying.jpg)
+### Making Adjustments to Volume ###
+Simply move the slider on iPeng to the desired audio level and the plugin will calculate the necessary volume on the DENON AVP/AVR and set it accordingly.  This will work in either the invidual volume control (second picture) or when grouped (synched with other players - first picture).
+### Making Adjustments to DENON Audio Settings ###
+With the [iPeng](http://penguinlovesmusic.de/) application you can make changes to the audio settings on your DENON AVP/AVR while playing music.  Press and hold on the player that is connected to your DENON from the Players screen.  The Player Settings screen will appear with the DENON AVP/AVR Control menu item at the top.  Select the DENON AVP/AVR Control menu item.  The DENON AVP/AVR Control Menu will appear.
+
+**Note:** The Dynamic Volume menu will only appear if you have the Dynamic Volume turned on in the Dynamic Equalizer menu.
+
+**Note:** The DENON Avp Control menu will be blank if the player is not turned on or configured to use the plugin.
+
+![http://denonavpcontrol.googlecode.com/files/DenonAvpControlPlayerSettings.jpg](http://denonavpcontrol.googlecode.com/files/DenonAvpControlPlayerSettings.jpg)   ![http://denonavpcontrol.googlecode.com/files/DenonAvpControl.jpg](http://denonavpcontrol.googlecode.com/files/DenonAvpControl.jpg)
+
+Pick a sub menu and make changes to the audio settings as is required. The plugin will send these changes to the Denon AVP/AVR for you.  You can see the changes to the audio settings by the checkmark that is to the right of the menu item description.
+
+When you are done with the audio setting just select the arrow at the top of the screen or scroll the screen left or right to return to the Now Playing screen.
+#### Known Limitations ####
+There are a few known limitations in using the [iPeng](http://penguinlovesmusic.de/) application and the DenonAvpControl plugin:
+
+  * The current version of iPeng (1.2.5 or later) will support fixed (100%) volume and the ability to control the volume via the plugin.  You should set the player to 100% fixed output if you wish the plugin to control the volume and for the SB Touch patch the volume at 100% (do not use the menu to set 100% volume).  Version 1.2.5 or later of iPeng is required if you wish to use the player volume set to 100%.
+  * The first time you use the plugin with the audio menus, there will be no checkmarks on the menu items to indicate which audio item is currently set.  Once you go to a menu and come back, its setting will be remembered
+  * Due to a limitation in how the [Logitech Media Server](http://www.mysqueezebox.com/download) works, the plugin will not be able to show changes in the AVP audio modes that have been done natively (without iPeng) until the user displays the menu twice (goes into the menu, exits the menu and returns to the menu again)
+  * There is a few seconds delay for some of the menu icons to show when you first load the DenonAvpControl menu.  Once it is loaded it will then be instanteous.
